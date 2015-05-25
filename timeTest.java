@@ -1,15 +1,14 @@
 public class timeTest {
         public static void main(String[] argv) {
                 int times = 0;
-                long currentTime = System.currentTimeMillis(), now;
+                long lastTime = System.currentTimeMillis();
                 while (true) {
-                        now = System.currentTimeMillis();
-                        if (now == currentTime) {
+                        if (System.currentTimeMillis() - lastTime < 1000) {
                                 times++;
                         }else{
                                 System.out.print(times + "\r");
                                 times = 0;
-                                currentTime = now;
+                                lastTime = System.currentTimeMillis();
                         }
                 }
         }
