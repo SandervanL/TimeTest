@@ -1,12 +1,11 @@
 var times = 0;
-var currentTime = new Date().getTime();
+var lastTime = new Date().getTime();
 while (1) {
-	var now = new Date().getTime();
-	if (currentTime === now){
-		++times
+	if (lastTime == new Date().getTime()){
+		times++;
 	}else{
 		process.stdout.write(times + "\r");
-		currentTime = now;
+		lastTime = new Date().getTime();
 		times = 0;
 	}
 }
