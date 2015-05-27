@@ -3,7 +3,11 @@ public class timeTest {
                 int times = 0;
                 long lastTime = System.currentTimeMillis();
                 while (true) {
+<<<<<<< HEAD
                         if (System.currentTimeMillis() - lastTime < 1) {
+=======
+                        if (System.currentTimeMillis() == lastTime) {
+>>>>>>> origin/master
                                 times++;
                         }else{
                                 System.out.print(times + "\r");
